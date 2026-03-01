@@ -1,0 +1,11 @@
+# Basic scan
+python3 zosint.py --url https://example.com --max-pages 20
+
+# Full scan + subdomains
+python3 zosint.py --url https://target.com --max-pages 50 --subdomains
+
+# Stealth mode
+python3 zosint.py --url https://target.com --stealth
+
+# Test cookies
+python3 zosint.py --url https://httpbin.org/cookies/set/test/123
